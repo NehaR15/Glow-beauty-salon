@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment - Glow Beauty Salon</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>Glow Beauty Salon</h1>
+</header>
+
+<section class="booking-section">
+
+    <div class="booking-box">
+
+        <h2>Book Your Appointment</h2>
+        <p>Choose your preferred service and time.</p>
+
+        <form action="/book" method="POST">
+
+            <label>Your Name</label>
+            <input type="text" name="name"
+                   placeholder="Enter your name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" name="phone"
+                   placeholder="Enter phone number" required>
+
+           {% if selected_service %}
+
+    <label>Selected Service</label>
+
+    <input
+        type="text"
+        value="{{ selected_service }}"
+        readonly
+    >
+
+    <input
+        type="hidden"
+        name="service"
+        value="{{ selected_service }}"
+    >
+
+{% else %}
+
+    <label>Select Service</label>
+
+    <select name="service" required>
+        <option value="">Choose a service</option>
+        <option value="Hair Styling">Hair Styling - ₹500</option>
+        <option value="Facial">Facial - ₹800</option>
+        <option value="Makeup">Makeup - ₹1500</option>
+        <option value="Manicure">Manicure - ₹600</option>
+    </select>
+
+{% endif %}
+            <label>Appointment Date</label>
+            <input type="date" name="date" required>
+
+            <label>Appointment Time</label>
+            <input type="time" name="time" required>
+
+            <button type="submit" class="button">
+                Confirm Booking
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/" class="button">Back to Home</a>
+
+    </div>
+
+</section>
+
+</body>
+</html>

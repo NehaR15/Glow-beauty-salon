@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Glow Beauty Salon - Admin Dashboard</h1>
+</header>
+
+<section class="section">
+    <h2>All Appointments</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment[0] }}</td>
+            <td>{{ appointment[1] }}</td>
+            <td>{{ appointment[2] }}</td>
+            <td>{{ appointment[3] }}</td>
+            <td>{{ appointment[4] }}</td>
+            <td>{{ appointment[5] }}</td>
+            <td>
+    {% if appointment[6] %}
+        {{ appointment[6] }}
+    {% else %}
+        Pending
+    {% endif %}
+</td>
+
+            <td>
+                <a href="/update_status/{{ appointment[0] }}/Confirmed">
+                    Confirm
+                </a>
+
+                <br>
+
+                <a href="/update_status/{{ appointment[0] }}/Cancelled">
+                    Cancel
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+</body>
+</html>

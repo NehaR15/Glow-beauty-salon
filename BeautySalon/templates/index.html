@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glow Beauty Salon | Pune</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Glow<span>Beauty</span></h1>
+            <small>Beauty, Confidence & Care</small>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="/booking" class="nav-button">Book Now</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="small-heading">WELCOME TO GLOW BEAUTY SALON</p>
+
+            <h2>Reveal Your<br><span>Natural Beauty</span></h2>
+
+            <p>
+                Experience premium beauty care, professional styling,
+                and relaxing treatments in the heart of Pune.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/booking" class="button">Book Appointment</a>
+                <a href="#services" class="secondary-button">Explore Services</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='salon.jpg') }}"
+                 alt="Glow Beauty Salon">
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+
+        <p class="section-label">ABOUT US</p>
+        <h2>Where Beauty Meets Confidence</h2>
+
+        <p class="section-text">
+            At Glow Beauty Salon, we believe beauty is more than appearance.
+            Our professional team provides personalized treatments, premium
+            products, and a relaxing environment to help you feel your best.
+        </p>
+
+        <div class="features">
+            <div>
+                <h3>Experienced Team</h3>
+                <p>Professional care from trained beauty experts.</p>
+            </div>
+
+            <div>
+                <h3>Premium Products</h3>
+                <p>Quality products selected for your beauty needs.</p>
+            </div>
+
+            <div>
+                <h3>Relaxing Experience</h3>
+                <p>A peaceful and comfortable salon environment.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+
+        <p class="section-label">OUR SERVICES</p>
+        <h2>Beauty Treatments Made For You</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='hair.jpg') }}"
+                     alt="Hair Styling">
+
+                <div class="card-content">
+                    <h3>Hair Styling</h3>
+                    <p>Professional styling and hair care.</p>
+                    <strong>₹500</strong>
+                    <a href="/booking?service=Hair%20Styling" class="button">Book Service</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='facial.jpg') }}"
+                     alt="Facial">
+
+                <div class="card-content">
+                    <h3>Facial</h3>
+                    <p>Refresh and nourish your skin.</p>
+                    <strong>₹800</strong>
+                    <a href="/booking?service=Facial" class="button">Book Service</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='makeup.jpg') }}"
+                     alt="Makeup">
+
+                <div class="card-content">
+                    <h3>Makeup</h3>
+                    <p>Look stunning for every occasion.</p>
+                    <strong>₹1500</strong>
+                    <a href="/booking?service=Makeup" class="button">Book Service</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='manicure.jpg') }}"
+                     alt="Manicure">
+
+                <div class="card-content">
+                    <h3>Manicure</h3>
+                    <p>Beautiful nails with professional care.</p>
+                    <strong>₹600</strong>
+                    <a href="/booking?service=Manicure" class="button">Book Service</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section reviews-section">
+
+        <p class="section-label">CUSTOMER REVIEWS</p>
+        <h2>Loved By Our Customers</h2>
+
+        <div class="reviews">
+
+            <div class="review-card">
+                <p>★★★★★</p>
+                <h3>Priya</h3>
+                <p>“Amazing service and very friendly staff!”</p>
+            </div>
+
+            <div class="review-card">
+                <p>★★★★★</p>
+                <h3>Neha</h3>
+                <p>“The salon is clean and the service is excellent.”</p>
+            </div>
+
+            <div class="review-card">
+                <p>★★★★★</p>
+                <h3>Anjali</h3>
+                <p>“Loved my hairstyle. Highly recommended!”</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Opening Hours -->
+    <section id="hours" class="info-section">
+
+        <h2>Visit Us</h2>
+
+        <p>Monday – Saturday: 10:00 AM – 8:00 PM</p>
+        <p>Sunday: 11:00 AM – 5:00 PM</p>
+
+    </section>
+
+
+    <!-- Offers -->
+    <!-- Special Offers -->
+<section id="offers" class="offers-section">
+
+    <div class="offers-heading">
+        <p class="section-label">SPECIAL OFFERS</p>
+        <h2>Exclusive Beauty Deals</h2>
+        <p>Enjoy beautiful experiences at special prices.</p>
+    </div>
+
+    <div class="offer-list">
+
+        <!-- Hair Styling -->
+        <div class="special-offer hair-offer">
+            <div class="offer-icon">✂️</div>
+
+            <div class="offer-info">
+                <span>LIMITED TIME OFFER</span>
+                <h3>Hair Styling</h3>
+                <p>Get a fresh and stylish look with our professional hair care.</p>
+                <strong>20% OFF</strong>
+            </div>
+
+            <a href="/booking?service=Hair%20Styling" class="offer-button">
+                Book Now
+            </a>
+        </div>
+
+
+        <!-- Beauty Combo -->
+        <div class="special-offer combo-offer">
+            <div class="offer-icon">🌸</div>
+
+            <div class="offer-info">
+                <span>BEST VALUE COMBO</span>
+                <h3>Beauty Combo</h3>
+                <p>Enjoy a refreshing facial and beautiful manicure together.</p>
+                <strong>₹1200</strong>
+            </div>
+
+            <a href="/booking" class="offer-button">
+                Book Now
+            </a>
+        </div>
+
+
+        <!-- Bridal Makeup -->
+        <div class="special-offer bridal-offer">
+            <div class="offer-icon">💍</div>
+
+            <div class="offer-info">
+                <span>BRIDAL SPECIAL</span>
+                <h3>Bridal Makeup</h3>
+                <p>Look gorgeous and confident on your most special day.</p>
+                <strong>From ₹5000</strong>
+            </div>
+
+            <a href="/booking?service=Makeup" class="offer-button">
+                Book Now
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+        <p class="section-label">GET IN TOUCH</p>
+        <h2>Let's Make You Glow</h2>
+
+        <p>📍 Pune, Maharashtra</p>
+        <p>📞 +91 9876543210</p>
+        <p>📧 glowbeautysalon@gmail.com</p>
+
+        <a href="https://wa.me/919876543210"
+           target="_blank"
+           class="button">
+            Contact Us on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Glow Beauty Salon</h3>
+        <p>Beauty, Confidence & Care</p>
+        <p>© 2026 Glow Beauty Salon. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
